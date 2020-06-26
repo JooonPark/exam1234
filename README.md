@@ -37,6 +37,37 @@ SECURITY WARNING: You are building a Docker image from Windows against a non-Win
 winpty docker run -it --name p91 -p 8008:80 pa0911/exam1234
 > localhost:8008 로 접속하여 "Welcome to nginx!" 문구로 시작하는 웹사이트 확인
 
+curl localhost:8008
+> curl 로 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   612  100   612    0     0  61200      0 --:--:-- --:--:-- --:--:-- 61200<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+
+
 docker push pa0911/exam1234  hub로 푸시
 > 결과 
 ##################################################

@@ -1,13 +1,19 @@
-'''
+```
 kubectl.exe delete deployments/nginx
+deployment.apps "nginx" deleted
 > 기존에 있던 deploy삭제
 
 kubectl run nginx --image=pa0911/exam1234 --port=80
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+deployment.apps/nginx created
 > 문제 2번으로 만든 이미지로 deploy생성
 
 kubectl.exe scale deployment nginx --replicas=20
+deployment.apps/nginx scaled
 > pod 20개 생성, 아래와 같이 20개가 생성됨
 
+$ kubectl.exe get po
+> pod 확인
 NAME                     READY   STATUS    RESTARTS   AGE
 nginx-5bd8cd8f6b-4bbdv   1/1     Running   0          7m10s
 nginx-5bd8cd8f6b-5zmrh   1/1     Running   0          7m10s
@@ -29,11 +35,4 @@ nginx-5bd8cd8f6b-v2gjs   1/1     Running   0          7m10s
 nginx-5bd8cd8f6b-v4qr4   1/1     Running   0          7m10s
 nginx-5bd8cd8f6b-vp8bp   1/1     Running   0          7m52s
 nginx-5bd8cd8f6b-wmmp8   1/1     Running   0          7m10s
-
-
-
-
-
-
-
-'''
+```

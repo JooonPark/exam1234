@@ -3,6 +3,9 @@
 
 '''
 Dockerfile 내 아래와 같이 코드를 입력
+git 주소를 
+git clone 주소 로 마운트
+git add -A
 
 FROM ubuntu
 RUN apt update -y

@@ -34,6 +34,9 @@ Successfully tagged pa0911/exam1234:latest
 SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
 ##################################################
 
+winpty docker run -it --name p91 -p 8008:80 pa0911/exam1234
+> localhost:8008 로 접속하여 "Welcome to nginx!" 문구로 시작하는 웹사이트 확인
+
 docker push pa0911/exam1234  hub로 푸시
 > 결과 
 ##################################################
